@@ -8,6 +8,7 @@ namespace Refactor
 {
     class Program
     {
+        // my machine   
         static int MyFirstFunction()
         {
             return 0;
