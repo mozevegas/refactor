@@ -11,14 +11,36 @@ namespace Refactor
         // my machine   
         static int MyFirstFunction()
         {
-            return 0;
+            var newRanNum = new Random().Next(1, 101);
+            return newRanNum;
+        }
+
+        static void MySecondFunction(string bucket)
+        {
+            if (bucket == "hello")
+            {
+                Console.WriteLine("yes");
+            }
+            else
+            {
+                Console.WriteLine("not correct");
+            }
         }
 
         static void Main(string[] args)
         {
             // Creates the random number
-            var ranNum = new Random().Next(1, 101);
-            Console.WriteLine($"the target is {ranNum}");
+            // var ranNum = new Random().Next(1, 101);
+            //Console.WriteLine($"the target is {ranNum}");
+            var ranNum = MyFirstFunction();
+            Console.WriteLine($"This is success {ranNum}");
+
+            Console.WriteLine("Enter hello");
+            MySecondFunction(Console.ReadLine());
+
+            // var newTwo = MySecondFunction();
+            // Console.WriteLine($"you said {newTwo}");
+            
 
 
             // creates a counter as an integer
@@ -89,6 +111,8 @@ namespace Refactor
                 // adds to counter, once reaches 5 it breaks out of cycle 
                 countsTrys++;
             }
+
+            
             // out of the main loop and evaluates whether counter broke free or not
             if (countsTrys > 4)
             {
