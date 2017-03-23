@@ -34,6 +34,16 @@ namespace Refactor
             return guessFunction;
         }
 
+        static void ResultFun(int countme)
+        {
+            if (countme > 4)
+            {
+                Console.WriteLine("You are out of chances, Sorry.");
+            }
+            else
+                Console.WriteLine("Yes! You have guessed correctly.");
+        }
+
         static void Main(string[] args)
         {
             // Creates the random number
@@ -120,17 +130,21 @@ namespace Refactor
                 countsTrys++;
             }
 
-            
-            // out of the main loop and evaluates whether counter broke free or not
-            if (countsTrys > 4)
-            {
-                Console.WriteLine("You lost :-(");
-            }
-            else
-            {
-                Console.WriteLine("You Won!");
-            }
 
+            // out of the main loop and evaluates whether counter broke free or not
+
+
+
+            //if (countsTrys > 4)
+            //{
+            //    Console.WriteLine("You lost :-(");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("You Won!");
+            //}
+
+            ResultFun(countsTrys);
 
 
         }
