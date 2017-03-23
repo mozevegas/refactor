@@ -27,6 +27,13 @@ namespace Refactor
             }
         }
 
+        static int ParseChecker(string checkMe)
+        {
+            int guessFunction = 0;
+            int.TryParse(checkMe, out guessFunction);
+            return guessFunction;
+        }
+
         static void Main(string[] args)
         {
             // Creates the random number
@@ -60,8 +67,9 @@ namespace Refactor
 
                 // asks for guess and checks number -- METHOD
                 Console.WriteLine("I'm thinking of a number 1-100. What is it?");
-                var input = Console.ReadLine();
-                int.TryParse(input, out guess);
+                ParseChecker(Console.ReadLine());
+                // var input = Console.ReadLine();
+                // int.TryParse(input, out guess);
 
                 // creates boolean for checking if number was guessed before
                 var wasAlreadyGuess = false;
